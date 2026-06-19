@@ -1,0 +1,11 @@
+body { font-family: sans-serif; margin: 16px; }
+.popup { min-width: 420px; }
+main { display: grid; gap: 12px; }
+label { display: grid; gap: 4px; margin: 8px 0; }
+input, select, button { font: inherit; padding: 8px; }
+nav { display: flex; gap: 12px; margin-bottom: 12px; }
+.card { border: 1px solid #ccc; border-radius: 8px; padding: 12px; margin: 10px 0; width: 100%; box-sizing: border-box; }
+.card h2 { margin: 0 0 8px; }
+.row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.row input { width: 80px; }
+#msg { color: #074; white-space: pre-wrap; }
