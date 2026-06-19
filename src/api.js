@@ -44,10 +44,6 @@ async function remoFetch(path, opt = {}) {
   return await res.json();
 }
 
-async function homesYomu(apiKey) {
-  return await remoFetch('/homes', { apiKey });
-}
-
 async function appliancesYomu() {
   return await remoFetch('/appliances');
 }
