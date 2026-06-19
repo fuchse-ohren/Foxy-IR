@@ -39,12 +39,12 @@ function airconCard(card, appliance) {
   const tempInput = document.createElement('input');
   tempInput.type = 'number'; tempInput.step = '0.5'; tempInput.value = temp;
   const items = [
-    ['運転切替', () => airconOkuru(appliance, { operation_mode: nextValue(modeList, mode, 1), temperature: tempInput.value })],
-    ['風量切替', () => airconOkuru(appliance, { operation_mode: mode, air_volume: nextValue(volumeList, volume, 1), temperature: tempInput.value })],
-    ['風向切替', () => airconOkuru(appliance, { operation_mode: mode, air_direction: nextValue(dirList, dir, 1), temperature: tempInput.value })],
-    ['温度−', () => { tempInput.value = Number(tempInput.value || temp || 0) - 1; return airconOkuru(appliance, { operation_mode: mode, temperature: tempInput.value }); }],
-    ['温度＋', () => { tempInput.value = Number(tempInput.value || temp || 0) + 1; return airconOkuru(appliance, { operation_mode: mode, temperature: tempInput.value }); }],
-    ['温度送信', () => airconOkuru(appliance, { operation_mode: mode, temperature: tempInput.value })],
+    ['運転切替', () => airconOkuru(appliance, { operation_mode: nextValue(modeList, mode, 1) })],
+    ['風量切替', () => airconOkuru(appliance, { air_volume: nextValue(volumeList, volume, 1) })],
+    ['風向切替', () => airconOkuru(appliance, { air_direction: nextValue(dirList, dir, 1) })],
+    ['温度−', () => { tempInput.value = Number(tempInput.value || temp || 0) - 1; return airconOkuru(appliance, { temperature: tempInput.value }); }],
+    ['温度＋', () => { tempInput.value = Number(tempInput.value || temp || 0) + 1; return airconOkuru(appliance, { temperature: tempInput.value }); }],
+    ['温度送信', () => airconOkuru(appliance, { temperature: tempInput.value })],
     ['停止', () => airconOkuru(appliance, { button: 'power-off' })]
   ];
   row.append(tempInput);
@@ -64,8 +64,7 @@ function signalButtons(card, appliance, signals) {
 
 async function main() {
   try {
-    const data = await yomu(['homeId']);
-    const appliances = (await appliancesYomu()).filter((item) => !data.homeId || (item.home && item.home.id === data.homeId));
+    const appliances = await appliancesYomu();
     const cache = await cacheSoroeru(appliances);
     cards.textContent = '';
     appliances.forEach((appliance) => {
