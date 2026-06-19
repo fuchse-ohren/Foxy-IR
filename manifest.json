@@ -22,5 +22,10 @@
     "gecko": {
       "id": "foxy-ir@example.com"
     }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{e53f94b1-49b2-4451-a6c3-750ba8760e28}"
+    }
   }
 }
