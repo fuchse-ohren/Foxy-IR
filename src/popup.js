@@ -22,6 +22,12 @@ async function airconOkuru(appliance, values) {
   await main();
 }
 
+async function airconUgokasu(appliance) {
+  await airconSet(appliance.id, {});
+  msgDasu('エアコンを起動しました。');
+  await main();
+}
+
 function airconCard(card, appliance) {
   const air = appliance.aircon || {};
   const setting = appliance.settings || {};
@@ -39,6 +45,7 @@ function airconCard(card, appliance) {
   const tempInput = document.createElement('input');
   tempInput.type = 'number'; tempInput.step = '0.5'; tempInput.value = temp;
   const items = [
+    ['起動', () => airconUgokasu(appliance)],
     ['運転切替', () => airconOkuru(appliance, { operation_mode: nextValue(modeList, mode, 1) })],
     ['風量切替', () => airconOkuru(appliance, { air_volume: nextValue(volumeList, volume, 1) })],
     ['風向切替', () => airconOkuru(appliance, { air_direction: nextValue(dirList, dir, 1) })],
