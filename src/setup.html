@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><title>Foxy IR 初期セットアップ</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <main>
+    <h1>初期セットアップ</h1>
+    <p>Nature RemoのAPIキーを入力し、規定の家屋を選んでください。</p>
+    <section>
+      <label>APIキー <input id="apiKey" type="password" autocomplete="off"></label>
+      <button id="homeYomu">家屋一覧を取得</button>
+    </section>
+    <section id="homeArea" hidden>
+      <label>規定の家屋 <select id="homeSelect"></select></label>
+      <button id="save">保存</button>
+    </section>
+    <p id="msg"></p>
+  </main>
+  <script src="api.js"></script><script src="setup.js"></script>
+</body>
+</html>
