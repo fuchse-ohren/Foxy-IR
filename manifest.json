@@ -1,13 +1,12 @@
 {
   "manifest_version": 2,
-  "name": "Foxy IR Nature Remo",
+  "name": "Foxy IR",
   "version": "0.1.0",
-  "description": "Nature Remo APIでスマート家電を操作するFirefoxアドオンです。",
-  "permissions": [
-    "storage",
-    "tabs",
-    "https://api.nature.global/*"
-  ],
+  "description": "Nature RemoのCloud API経由で家電を操作するFirefoxアドオンです。",
+  "icons": {
+    "64": "icon_64.png"
+  },
+  "permissions": ["storage", "tabs", "https://api.nature.global/*"],
   "background": {
     "scripts": ["src/background.js"]
   },

@@ -1,9 +1,30 @@
 <!doctype html>
 <html lang="ja">
-<head><meta charset="utf-8"><title>Foxy IR</title><link rel="stylesheet" href="style.css"></head>
-<body class="popup">
-  <nav><a href="setup.html" target="_blank">初期セットアップ</a> <a href="options.html" target="_blank">設定</a></nav>
-  <main><h1>リモコン</h1><div id="cards"></div><p id="msg"></p></main>
-  <script src="api.js"></script><script src="popup.js"></script>
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <title>Foxy IR</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="popup">
+        <nav>
+            <ul class="dads-horizontal-menu">
+                <li class="dads-horizontal-menu__item">
+                    <a class="dads-horizontal-menu__item-inner" href="options.html" target="_blank">設定</a>
+                </li>
+                <li class="dads-horizontal-menu__item">
+                    <a class="dads-horizontal-menu__item-inner" href="setup.html" target="_blank">初期セットアップ</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h1 style="display: flex">
+                <img src="/icon.png" width="64px" style="display: flex" />
+                <div style="display: flex; align-items: center; margin: 0px 20px">Foxy IR</div>
+            </h1>
+            <div id="cards"></div>
+            <p id="msg"></p>
+        </main>
+        <script src="api.js"></script>
+        <script src="popup.js"></script>
+    </body>
 </html>

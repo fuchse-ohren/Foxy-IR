@@ -1,16 +1,38 @@
 <!doctype html>
 <html lang="ja">
-<head><meta charset="utf-8"><title>Foxy IR 初期セットアップ</title><link rel="stylesheet" href="style.css"></head>
-<body>
-  <main>
-    <h1>初期セットアップ</h1>
-    <p>Nature RemoのAPIキーを入力してください。</p>
-    <section>
-      <label>APIキー <input id="apiKey" type="password" autocomplete="off"></label>
-      <button id="save">保存</button>
-    </section>
-    <p id="msg"></p>
-  </main>
-  <script src="api.js"></script><script src="setup.js"></script>
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <title>Foxy IR 初期セットアップ</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main>
+            <h1 style="display: flex">
+                <img src="/icon.png" width="64px" style="display: flex" />
+                <div style="display: flex; align-items: center; margin: 0px 20px">Foxy IR</div>
+            </h1>
+            <h1>初期セットアップ</h1>
+            <p>APIキーを入力してください。</p>
+            <section>
+                <div class="dads-form-control-label" data-size="md">
+                    <label class="dads-form-control-label__label" for="name-input">
+                        APIキー
+                        <span class="dads-form-control-label__requirement" data-required="true">※必須</span>
+                    </label>
+                    <div>
+                        <span class="dads-input-text">
+                            <input id="name-input" class="dads-input-text__input" data-size="md" id="apiKey" type="password" autocomplete="off" style="width: 100%" />
+                        </span>
+                    </div>
+                </div>
+                <br />
+                <br />
+                <button class="dads-button" data-size="md" data-type="solid-fill" id="save" style="width: 100%">保存</button>
+            </section>
+
+            <p id="msg"></p>
+        </main>
+        <script src="api.js"></script>
+        <script src="setup.js"></script>
+    </body>
 </html>
