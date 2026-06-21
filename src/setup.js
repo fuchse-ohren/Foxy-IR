@@ -8,5 +8,5 @@ function msgDasu(text) {
 
 saveButton.addEventListener("click", async () => {
   await kaku({ apiKey: apiKey.value.trim() });
-  msgDasu("保存しました。アドオンのアイコンから操作できます。");
+  msgDasu("保存しました。このページを閉じてください。");
 });
