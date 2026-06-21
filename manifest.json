@@ -1,4 +1,4 @@
-git {
+{
   "manifest_version": 2,
   "name": "Foxy IR",
   "version": "1.1",
