@@ -1,9 +1,14 @@
 /* style.css */
 body {
-    width: 600px;
+    width: 640px;
     margin: 0 auto;
     padding: 5px;
 }
+
+#icon {
+    width: 64px;
+}
+
 .row {
     width: 100%;
     display: flex;
