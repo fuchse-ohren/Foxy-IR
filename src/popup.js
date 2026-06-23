@@ -55,6 +55,7 @@ function airconCard(card, appliance) {
   tempInput.step = "0.5";
   tempInput.value = temp;
   tempInput.className = "dads-input-text__input";
+  tempInput.size = 5;
   const items = [
     ["温度設定", () => airconOkuru(appliance, { temperature: tempInput.value })],
     [
